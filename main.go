@@ -28,7 +28,7 @@ func main() {
 	case "div":
 		clicmds.Div(os.Args[2:])
 	default:
-		fmt.Println("default")
+		fmt.Println("Do go run . add/sub/mul(any one) -val1=some int -val2=some int")
 	}
 }
 func add(x int, y int) int {
