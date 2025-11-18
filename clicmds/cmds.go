@@ -14,3 +14,12 @@ func Add(args []string) {
 
 	fmt.Println(x + y)
 }
+func Sub(args []string) {
+	fs := flag.NewFlagSet("sub", flag.ExitOnError)
+	var x, y int
+	fs.IntVar(&x, "val1", 0, "val 1")
+	fs.IntVar(&y, "val2", 0, "val 1")
+	fs.Parse(args)
+
+	fmt.Println(x - y)
+}
