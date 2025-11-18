@@ -23,6 +23,8 @@ func main() {
 		clicmds.Sub(os.Args[2:])
 	case "mul":
 		clicmds.Mul(os.Args[2:])
+	case "div":
+		clicmds.Div(os.Args[2:])
 	default:
 		fmt.Println("default")
 	}

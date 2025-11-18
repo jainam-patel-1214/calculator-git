@@ -32,3 +32,12 @@ func Mul(args []string) {
 
 	fmt.Println(x * y)
 }
+func Div(args []string) {
+	fs := flag.NewFlagSet("div", flag.ExitOnError)
+	var x, y int
+	fs.IntVar(&x, "val1", 0, "val 1")
+	fs.IntVar(&y, "val2", 1, "val 1")
+	fs.Parse(args)
+
+	fmt.Println(x / y)
+}
