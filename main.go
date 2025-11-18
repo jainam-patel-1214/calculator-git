@@ -26,7 +26,7 @@ func main() {
 	case "div":
 		clicmds.Div(os.Args[2:])
 	default:
-		fmt.Println("bla bla bla heheheheh huhuhhuhuh")
+		fmt.Println("default")
 	}
 }
 func add(x int, y int) int {
