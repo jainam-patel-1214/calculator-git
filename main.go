@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"gitpractice/clicmds"
+	"os"
+)
 
 func main() {
 	fmt.Println("hello")
@@ -10,6 +14,16 @@ func main() {
 	fmt.Println(sub(a, b))
 	fmt.Println(mul(a, b))
 	fmt.Println(div(a, b))
+	if len(os.Args) < 2 {
+		fmt.Println("expected any subcommands after go run main.go. Below is some reference to commands")
+		os.Exit(1)
+	}
+	switch os.Args[1] {
+	case "add":
+		clicmds.Add(os.Args[2:])
+	default:
+		fmt.Println("default")
+	}
 }
 func add(x int, y int) int {
 	return x + y
